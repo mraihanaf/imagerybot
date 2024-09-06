@@ -1,5 +1,5 @@
 import redis from "./redis"
-import { GuildId, ChannelId, IImageryMedia } from "../types/imagery";
+import { GuildId, ChannelId, IImageryMedia } from "../types";
 
 export async function getImageryChannel(guildId: GuildId): Promise<null|ChannelId|undefined> {
     const isGuildExist = await redis?.hexists("imagery_channel", guildId)
